@@ -8,11 +8,11 @@ import re
 ###########################################################################
 # MAIN
 ###########################################################################
-def main():
+def run(output_path):
     reviews, ratings = scrap_yelp()
 
     # Saving to disk
-    with open(PATH_TO_SAVE_SCRAPED_COMMENTS, 'w') as f:
+    with open(output_path, 'w') as f:
         for review in reviews:
             f.write(review + '\n')
 
@@ -65,4 +65,4 @@ def scrap_yelp():
 
 
 if __name__ == '__main__':
-    main()
+    run()
