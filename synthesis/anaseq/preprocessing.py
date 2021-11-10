@@ -1,13 +1,10 @@
-from synthesis.params import STOPWORDS
-
 from symspellpy import SymSpell, Verbosity
-from nltk.corpus import stopwords
 from unidecode import unidecode
 import pkg_resources
 import spacy
 import re
 
-eng_stopwords = stopwords.words('english')  # python -m spacy download en_core_web_sm
+# python -m spacy download en_core_web_sm
 nlp = spacy.load("en_core_web_sm")
 
 
