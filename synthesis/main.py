@@ -2,6 +2,8 @@ from synthesis.params import PATH_TO_SAVE_SCRAPED_COMMENTS
 from synthesis.pipeline import Pipeline
 from synthesis.scraper import yelp
 
+import pandas as pd
+
 
 def main():
     # Scraping
@@ -12,7 +14,9 @@ def main():
     model = Pipeline()
     data = model(text_batch)
 
-    return data
+    df = pd.DataFrame(data)
+
+    return df
 
 
 ########################################################################

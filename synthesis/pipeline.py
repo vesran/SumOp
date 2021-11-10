@@ -7,7 +7,7 @@ import tensorflow as tf
 
 class Pipeline:
 
-    def __init__(self, window_size=1, seed_size=100, aspects=None):
+    def __init__(self, window_size=1, seed_size=100, aspects_dict=None):
         """
         :param window_size: int specifying the window size for interpolation of polarity
         :param seed_size: int specifying the number of words to consider as seed to detect an aspect
@@ -18,7 +18,7 @@ class Pipeline:
         self.segmenter = tf.keras.models.load_model(PATH_TO_ANASENT_MODEL)
         self.window_size = window_size
         self.seed_size = seed_size
-        self.aspect = aspects if aspects is not None else ASPECTS
+        self.aspect = aspects_dict if aspects_dict is not None else ASPECTS
 
     def __call__(self, batch, *args, **kwargs):
         """
