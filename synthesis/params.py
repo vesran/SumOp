@@ -3,7 +3,7 @@
 FORBIDDEN_TEXT = "Cet avis a été supprimé pour violation de nos Conditions d'utilisation"
 URL_FORMAT = 'https://www.yelp.fr/not_recommended_reviews/howlin-rays-los-angeles-3?not_recommended_start=#'
 PATH_TO_SAVE_SCRAPED_COMMENTS = 'data/validation/yelp.txt'
-PATH_TO_W2V = 'embedders/w2v_200_30epochs.bin'
+PATH_TO_W2V = 'models/w2v_200_30epochs.bin'
 
 
 # Cleaning texts for sentiment segmentation
@@ -18,7 +18,7 @@ STOPWORDS = {'the', 'a', 'so', 'an', 'i', 'be', 'of', 'we', 'you', 'they', 'that
 
 # Sentiment analysis
 PATH_TO_TEST_ANASENT = 'data/anasent/test.sav'
-PATH_TO_ANASENT_MODEL = 'embedders/anaseq/anaseq_002'
+PATH_TO_ANASENT_MODEL = 'models/anaseq/anaseq_002'
 
 # Aspects
 ASPECTS = {

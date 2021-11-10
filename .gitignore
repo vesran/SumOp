@@ -8,7 +8,7 @@ __pycache__/
 *.npy
 *.pkl
 _dev
-embedders/anaseq
+models/anaseq
 
 # Data
 *.csv
