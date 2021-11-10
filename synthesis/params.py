@@ -2,7 +2,7 @@
 # Target the restaurant you want to scrap on Yelp
 FORBIDDEN_TEXT = "Cet avis a été supprimé pour violation de nos Conditions d'utilisation"
 URL_FORMAT = 'https://www.yelp.fr/not_recommended_reviews/howlin-rays-los-angeles-3?not_recommended_start=#'
-PATH_TO_SAVE_SCRAPED_COMMENTS = 'data/validation/yelp.csv'
+PATH_TO_SAVE_SCRAPED_COMMENTS = 'data/validation/yelp.txt'
 
 
 # Cleaning texts for sentiment segmentation

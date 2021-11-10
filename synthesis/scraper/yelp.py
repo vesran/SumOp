@@ -1,7 +1,6 @@
 from synthesis.params import FORBIDDEN_TEXT, URL_FORMAT, PATH_TO_SAVE_SCRAPED_COMMENTS
 
 from bs4 import BeautifulSoup
-import pandas as pd
 import urllib
 import re
 
@@ -12,9 +11,10 @@ import re
 def main():
     reviews, ratings = scrap_yelp()
 
-    # Saving to csv
-    df = pd.DataFrame({'review': reviews, 'rating': ratings})
-    df.to_csv(PATH_TO_SAVE_SCRAPED_COMMENTS, index=False, sep=';')
+    # Saving to disk
+    with open(PATH_TO_SAVE_SCRAPED_COMMENTS, 'w') as f:
+        for review in reviews:
+            f.write(review + '\n')
 
 
 ###########################################################################
