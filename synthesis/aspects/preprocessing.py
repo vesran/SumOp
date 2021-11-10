@@ -1,6 +1,5 @@
 from symspellpy import SymSpell, Verbosity
 from unidecode import unidecode
-from tqdm import tqdm
 import pkg_resources
 import spacy
 import re
@@ -60,7 +59,7 @@ def load_symspell():
 
 def fix_spelling(corpus, sym_spell):
     clean_corpus = []
-    for doc in tqdm(corpus):
+    for doc in corpus:
         words = []
         for word in doc.split(' '):
             if word == '':
