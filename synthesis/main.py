@@ -1,4 +1,4 @@
-from synthesis.params import PATH_TO_SAVE_SCRAPED_COMMENTS
+from synthesis.params import PATH_TO_SAVE_SCRAPED_COMMENTS, PATH_TO_OUTPUT_DATA
 from synthesis.pipeline import Pipeline
 from synthesis.scraper import yelp
 
@@ -14,13 +14,13 @@ def main():
     model = Pipeline()
     data = model(text_batch)
 
+    # Save output
     df = pd.DataFrame(data)
-
-    return df
+    df.to_csv(PATH_TO_OUTPUT_DATA, index=False)
 
 
 ########################################################################
-# Utils functions
+# Utils function
 ########################################################################
 
 def read_text_file(path):
