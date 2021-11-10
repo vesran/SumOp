@@ -5,6 +5,7 @@ __pycache__/
 .idea
 *.bin
 *.txt
+!requirements.txt
 *.npy
 *.pkl
 _dev
