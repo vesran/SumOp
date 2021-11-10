@@ -1,7 +1,3 @@
-from synthesis.params import PATH_TO_ANASENT_MODEL, PATH_TO_SAVE_SCRAPED_COMMENTS, STOPWORDS
-from synthesis.anaseq.preprocessing import preprocess
-
-import tensorflow as tf
 import numpy as np
 
 
@@ -45,7 +41,7 @@ def split_prediction(ndoc):
 
     units = [[]]
     for w, i, p in ndoc:
-        if len(units[-1]) == 0 or ((units[-1][-1][2] - 0.5) * (p - 0.5) > 0):  # Pas de changement de signe
+        if len(units[-1]) == 0 or ((units[-1][-1][2] - 0.5) * (p - 0.5) > 0):  # No sign change
             units[-1].append((w, i, p))
         else:
             units.append([(w, i, p)])
