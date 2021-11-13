@@ -1,4 +1,4 @@
-from synthesis.params import FORBIDDEN_TEXT, URL_FORMAT, PATH_TO_SAVE_SCRAPED_COMMENTS
+from sumop.params import FORBIDDEN_TEXT, URL_FORMAT, PATH_TO_SAVE_SCRAPED_COMMENTS
 
 from bs4 import BeautifulSoup
 import urllib

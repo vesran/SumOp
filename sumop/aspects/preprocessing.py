@@ -1,4 +1,4 @@
-from synthesis.text_cleaning import \
+from sumop.text_cleaning import \
     (load_symspell, cleaning_corpus, remove_punctuation, fix_spelling, custom_remove_stopwords)
 
 

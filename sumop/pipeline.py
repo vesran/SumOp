@@ -1,6 +1,6 @@
-from synthesis.params import PATH_TO_ANASENT_MODEL, STOPWORDS, ASPECTS, PATH_TO_W2V
-from synthesis import anaseq
-from synthesis import aspects
+from sumop.params import PATH_TO_ANASENT_MODEL, STOPWORDS, ASPECTS, PATH_TO_W2V
+from sumop import anaseq
+from sumop import aspects
 
 import tensorflow as tf
 

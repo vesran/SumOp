@@ -1,4 +1,4 @@
-from synthesis.params import ASPECTS_PARAMS
+from sumop.params import ASPECTS_PARAMS
 
 from sklearn.metrics.pairwise import rbf_kernel, cosine_similarity
 from collections import Counter

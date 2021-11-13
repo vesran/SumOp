@@ -1,6 +1,6 @@
-from synthesis.params import PATH_TO_SAVE_SCRAPED_COMMENTS, PATH_TO_OUTPUT_DATA
-from synthesis.pipeline import Pipeline
-from synthesis.scraper import yelp
+from sumop.params import PATH_TO_SAVE_SCRAPED_COMMENTS, PATH_TO_OUTPUT_DATA
+from sumop.pipeline import Pipeline
+from sumop.scraper import yelp
 
 import pandas as pd
 
