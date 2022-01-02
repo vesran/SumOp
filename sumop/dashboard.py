@@ -3,7 +3,6 @@ try:
 except ModuleNotFoundError:
     from params import PATH_TO_OUTPUT_DATA, ASPECTS
 
-import matplotlib.pyplot as plt
 import plotly.express as px
 import streamlit as st
 import pandas as pd
@@ -23,7 +22,7 @@ def plot_sentiment_for_each_aspects(df):
                      values=aspect,
                      names='sentiment',
                      color='sentiment',
-                     title=f'Sentiments for {aspect}',
+                     title=f'Sentiments about {aspect}',
                      color_discrete_map={'POSITIVE':'#32CD32', 'NEGATIVE':'#d32f2f'})
         st.plotly_chart(fig)
 
@@ -44,14 +43,6 @@ def plot_aspects_distribution(df):
                  y='count',
                  title='Number of opinions per aspect')
     st.plotly_chart(fig)
-
-
-def plot_overall_sentiment(df):
-    counts = df['sentiment'].value_counts().reset_index()
-
-    fig, ax = plt.subplots(1, 1)
-    counts.plot(kind='pie', y='sentiment', labels=counts['index'], ax=ax, autopct='%1.2f%%')
-    st.pyplot(fig)
 
 
 if __name__ == '__main__':

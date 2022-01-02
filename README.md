@@ -32,6 +32,15 @@ Under ```sumop/scraper```, add scripts to scrap the desired website. Data should
 Change the ```PATH_TO_SAVE_SCRAPED_COMMENTS``` variable in ```sumop/params.py``` to indicate the new text file you have defined as well as the link to the website's article ```URL_FORMAT``` (```#``` indicates page number but it is only used to scrap reviews so you can customize this variable as you wish).
 Next, run the app again.
 
+## Changing the list of aspects
+
+The list of aspects is defined in the ```sumop/params.py``` file under the variable ```ASPECTS```. This variable refers to a dictionary which maps the aspects to the minimum probability threshold which consider that a review is actually talking about the specified aspect.
+Experiments should be conducted to find the optimal threshold values. If not possible, the value 0.4 is suggested. These values are independent of each others.
+
+## Customizing the dashboard
+
+The dashboard was built using Streamlit and Plotly. The script responsible of the dashboard is ```sumop/dashboard.py```.
+
 # Method's details
 
 ## TL;DR
