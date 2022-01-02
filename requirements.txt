@@ -1,8 +1,13 @@
 unidecode
 joblib
-numpy
+numpy==1.19.2
 beautifulsoup4
-tensorflow
+tensorflow==2.5.0
 sklearn
 gensim
 pandas
+spacy
+symspellpy
+matplotlib
+streamlit
+plotly
